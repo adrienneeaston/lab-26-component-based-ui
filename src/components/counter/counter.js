@@ -4,20 +4,27 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stuff: 0
+      counter: 0
     };
   }
 
-  handleButtonClick = e => {
-    e.preventDefault();
-    this.setState({ stuff: Math.floor(Math.random() * 20 + 1) });
+  increment = element => {
+    element.preventDefault();
+    let counter = this.state.counter + 1;
+    this.setState({ counter });
+  };
+
+  decrement = element => {
+    element.preventDefault();
+    this.setState({ counter: this.state.counter - 1 });
   };
 
   render() {
     return (
       <div>
-        <h4>{this.state.stuff}</h4>
-        <button onClick={this.handleButtonClick}>Click Me</button>
+        <button onClick={this.decrement}>-</button>
+        <span>count: {this.state.counter}</span>
+        <button onClick={this.increment}>+</button>
       </div>
     );
   }
