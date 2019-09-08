@@ -8,6 +8,8 @@
     padding: 1.5em;
     font-size: 1.5em;
     font-weight: bold;
+    background: rgb(65, 65, 139);
+    border-color: black;
   }
 
   span {
@@ -15,5 +17,6 @@
     background: white;
     line-height: 3em;
     border-radius: 50%;
+    font-size: 3em;
   }
 }
